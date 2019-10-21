@@ -69,7 +69,7 @@ const ContactForm = () => {
       <form className={classes.container} onSubmit={handleSubmit} autoComplete="off">
         <TextField
             id="email"
-            label="Email"
+            label="Mail"
             className={classes.textField}
             value={email}
             onChange={e => setEmail(e.target.value)}
@@ -79,7 +79,7 @@ const ContactForm = () => {
 
         <TextField
             id="name"
-            label="Name"
+            label="Nombre"
             className={classes.textField}
             value={name}
             onChange={e => setName(e.target.value)}
@@ -89,7 +89,7 @@ const ContactForm = () => {
 
           <TextField
             id="subject"
-            label="Subject"
+            label="Tema"
             className={classes.textField}
             value={subject}
             onChange={e => setSubject(e.target.value)}
@@ -100,7 +100,7 @@ const ContactForm = () => {
 
           <TextField
             id="message"
-            label="Message"
+            label="Mensaje"
             className={classes.textField}
             value={message}
             onChange={e => setMessage(e.target.value)}
