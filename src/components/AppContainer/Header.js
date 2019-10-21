@@ -1,20 +1,18 @@
 import React from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 const Header = ({ classes }) => (
   <Toolbar className={classes.toolbar}>
-    <Typography
-      component="h2"
-      variant="h5"
-      color="inherit"
-      align="center"
-      noWrap
-      className={classes.toolbarTitle}
+    <Grid
+    container
+    direction="row"
+    justify="space-evenly"
+    alignItems="center"
     >
-      Salgo De
-    </Typography>
-</Toolbar>
+      <img src={require('../../assets/_salgode.png')} style={{ width: 200 }} alt="Salgo De"/>
+    </Grid>
+  </Toolbar>
 );
 
 export default Header;
