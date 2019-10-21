@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
   footer: {
     padding: theme.spacing(2),
     marginTop: 'auto',
-    backgroundColor: 'white',
+    borderTop: '1px solid blue',
   },
   fab: {
     margin: theme.spacing(1),

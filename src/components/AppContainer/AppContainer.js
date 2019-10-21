@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Header from './Header';
 import Links from './Links';
@@ -14,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100vh',
   },
   toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    borderBottom: `1px solid blue`,
   },
   toolbarTitle: {
     flex: 1,
@@ -49,9 +48,6 @@ export default function AppContainer({ children }) {
         <Header classes={classes} />
         <Links classes={classes}/>
         {children}
-        {/* <Paper className={classes.main}>
-          { children }
-          </Paper> */}
         <Footer classes={classes} />
       </Container>
     </React.Fragment>

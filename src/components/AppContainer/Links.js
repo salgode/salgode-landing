@@ -4,7 +4,7 @@ import Link from '@material-ui/core/Link';
 
 const sections = [
   { name: 'Quienes Somos', link: '/'},
-  { name: 'Descarga La App', link: '/download'},
+  { name: 'Descarga La App', link: '/descarga'},
   { name: 'Como Funciona', link: '/como-funciona'},
   { name: 'Contactanos', link: '/contactanos' },
 ];

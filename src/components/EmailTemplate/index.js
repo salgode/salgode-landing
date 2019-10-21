@@ -3,6 +3,7 @@ import * as emailjs from 'emailjs-com'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -10,14 +11,24 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
   },
   textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
+   width: '100%'
   },
   dense: {
     marginTop: theme.spacing(2),
   },
   menu: {
     width: 200,
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+    backgroundColor: 'blue',
+    color: 'white'
+  },
+  paper: {
+    marginTop: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
 }));
 
@@ -53,7 +64,8 @@ const ContactForm = () => {
 
 
   return (
-    <>
+    <Container component="main" maxWidth="xs">
+    <div className={classes.paper}>
       <h1 className="p-heading1"> Contactanos! </h1>
       <form className={classes.container} noValidate onSubmit={handleSubmit} autoComplete="off">
         <TextField
@@ -96,12 +108,12 @@ const ContactForm = () => {
             margin="normal"
             variant="outlined"
           />
-
-        <Button variant="primary" type="submit" style={{ color: 'blue' }}>
+      </form>
+      <Button variant="contained" color="blue" type="submit" className={classes.submit}>
           Submit
         </Button>
-      </form>
-    </>
+    </div>
+    </Container>
   );
 }
 
