@@ -43,6 +43,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log('asdasd')
     let templateParams = {
       name: name,
       from_name: email,
@@ -111,7 +112,7 @@ const ContactForm = () => {
       </form>
       <Button variant="contained" color="primary" type="submit" className={classes.submit}>
           Submit
-        </Button>
+      </Button>
     </div>
     </Container>
   );

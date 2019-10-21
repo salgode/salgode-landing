@@ -8,6 +8,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Hidden from '@material-ui/core/Hidden';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,10 +32,9 @@ const useStyles = makeStyles(theme => ({
   },
   mainFeaturedPost: {
     position: 'relative',
-    backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
-    backgroundImage: 'url(https://source.unsplash.com/user/erondu)',
+    backgroundColor: 'blue',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -91,8 +91,10 @@ export default function MainView(){
               <div className={classes.cardDetails}>
                 <CardContent>
 
-                  <Typography component="h2" variant="h5">
-                    SalgoDe
+                  <Typography component="h1"  ariant="h5">
+                    <Box fontWeight="fontWeightBold" fontSize={24} m={1}>
+                      SalgoDe
+                    </Box>
                   </Typography>
 
                   <Typography variant="subtitle1" color="textSecondary">

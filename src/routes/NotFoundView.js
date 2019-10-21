@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NotFoundView = () => (
   <div>
-   not found view
+    404 Página no encontrada, vuelve a <Link route={'/'}> Inicio </Link>
   </div>
 );
 
