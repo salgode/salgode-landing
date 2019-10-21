@@ -28,15 +28,15 @@ export default function StickyFooter() {
         alignItems="center"
       >
         <Typography variant="h6" align="center" gutterBottom>
-          Facebook
+        <a href="https://www.facebook.com/SalgoDe-112132566873573/">Facebook</a>
         </Typography>
 
         <Typography variant="h6" align="center" gutterBottom>
-          Instagram
+        <a href="https://www.instagram.com/salgodecl/">Instagram</a>
         </Typography>
 
         <Typography variant="h6" align="center" gutterBottom>
-          Github
+          <a href="https://github.com/Varuscl/salgode">Github</a>
         </Typography>
       </Grid>
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
