@@ -9,10 +9,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
-  paper: {
+  img: {
     height: 600,
     width: 300,
-    backgroundColor: 'red'
   },
   control: {
     padding: theme.spacing(2),
@@ -25,23 +24,26 @@ export default function HowToView(){
   return (
     <div style={{ paddingBottom: 10}}>
       <Grid item xs={12}>
-       <Typography component="h1"  ariant="h5">
+       <Typography align="center" component="h1" ariant="h5">
           <Box fontWeight="fontWeightBold" fontSize={24} m={1}>
-              Usuario
+              Pasajero
           </Box>
        </Typography>
         <Grid container justify="center" spacing={spacing}>
 
             <Grid key={"a"} item>
-              <Paper className={classes.paper} />
+              <img alt="asdf" className={classes.img} 
+              src={require('../assets/infografias/passenger1.jpg')}></img>
             </Grid>
 
             <Grid key={"b"} item>
-              <Paper className={classes.paper} />
+              <img alt="asdf" className={classes.img} 
+              src={require('../assets/infografias/passenger2.jpg')}></img>
             </Grid>
 
-<             Grid key={"c"} item>
-              <Paper className={classes.paper} />
+            <Grid key={"c"} item>
+              <img alt="asdf" className={classes.img} 
+              src={require('../assets/infografias/passenger3.jpg')}></img>
             </Grid>
 
         </Grid>
@@ -49,22 +51,25 @@ export default function HowToView(){
 
     <hr style={{ marginTop: 10 }}/>
       <Grid item xs={12}>
-      <Typography component="h1"  ariant="h5">
+      <Typography align="center" component="h1"  ariant="h5">
           <Box fontWeight="fontWeightBold" fontSize={24} m={1}>
               Conductor
           </Box>
        </Typography>
         <Grid container justify="center" spacing={spacing}>
           <Grid key={"a"} item>
-            <Paper className={classes.paper} />
+            <img alt="asdf" className={classes.img} 
+            src={require('../assets/infografias/driver1.jpg')}></img>
           </Grid>
 
           <Grid key={"b"} item>
-            <Paper className={classes.paper} />
+            <img alt="asdf" className={classes.img} 
+            src={require('../assets/infografias/driver2.jpg')}></img>
           </Grid>
 
           <Grid key={"c"} item>
-            <Paper className={classes.paper} />
+            <img alt="asdf" className={classes.img} 
+            src={require('../assets/infografias/driver3.jpg')}></img>
           </Grid>
 
         </Grid>
