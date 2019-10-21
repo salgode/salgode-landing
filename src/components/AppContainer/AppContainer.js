@@ -48,9 +48,10 @@ export default function AppContainer({ children }) {
       <Container maxWidth="lg" className={classes.root}>
         <Header classes={classes} />
         <Links classes={classes}/>
-        <Paper className={classes.main}>
+        {children}
+        {/* <Paper className={classes.main}>
           { children }
-          </Paper>
+          </Paper> */}
         <Footer classes={classes} />
       </Container>
     </React.Fragment>
