@@ -1,22 +1,37 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import * as emailjs from 'emailjs-com'
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+  },
+  dense: {
+    marginTop: theme.spacing(2),
+  },
+  menu: {
+    width: 200,
+  },
+}));
 
 // codes based on: https://medium.com/@eesh.t/send-email-using-emailjs-and-react-form-9993bb6929d8
-class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    }
-  }
+const ContactForm = () => {
+  const classes = useStyles();
 
-  handleSubmit(e) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
     e.preventDefault()
-    const { name, email, subject, message } = this.state
     let templateParams = {
       name: name,
       from_name: email,
@@ -30,81 +45,64 @@ class ContactForm extends Component {
        templateParams,
       process.env.REACT_APP_EMAILJS_TOKEN,
      )
-     this.resetForm()
+     setName('')
+     setEmail('')
+     setSubject('')
+     setMessage('')
   }
 
-  resetForm() {
-    this.setState({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    })
-  }
 
-  handleChange = (param, e) => {
-    this.setState({ [param]: e.target.value })
-  }
+  return (
+    <>
+      <h1 className="p-heading1"> Contactanos! </h1>
+      <form className={classes.container} noValidate onSubmit={handleSubmit} autoComplete="off">
+        <TextField
+            id="email"
+            label="Email"
+            className={classes.textField}
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            margin="normal"
+            variant="outlined"
+          />
 
-  render() {
-    return (
-      <>
-        <h1 className="p-heading1"> Contactanos! </h1>
-        <Form onSubmit={this.handleSubmit.bind(this)}>
-          <FormGroup controlId="formBasicEmail">
-            <Label className="text-muted">Email address</Label>
-            <Input
-              type="email"
-              name="email"
-              value={this.state.email}
-              className="text-primary"
-              onChange={this.handleChange.bind(this, 'email')}
-              placeholder="Enter email"
-            />
+        <TextField
+            id="name"
+            label="Name"
+            className={classes.textField}
+            value={name}
+            onChange={e => setName(e.target.value)}
+            margin="normal"
+            variant="outlined"
+          />
 
-          </FormGroup>
-            <FormGroup controlId="formBasicName">
-            <Label className="text-muted">Name</Label>
-            <Input
-              type="text"
-              name="name"
-              value={this.state.name}
-              className="text-primary"
-              onChange={this.handleChange.bind(this, 'name')}
-              placeholder="Name"
-            />
-          </FormGroup>
+          <TextField
+            id="subject"
+            label="Subject"
+            className={classes.textField}
+            value={subject}
+            onChange={e => setSubject(e.target.value)}
+            margin="normal"
+            variant="outlined"
+          />
 
-          <FormGroup controlId="formBasicSubject">
-            <Label className="text-muted">Subject</Label>
-            <Input
-              type="text"
-              name="subject"
-              className="text-primary"
-              value={this.state.subject}
-              onChange={this.handleChange.bind(this, 'subject')}
-              placeholder="Subject"
-            />
-          </FormGroup>
 
-          <FormGroup controlId="formBasicMessage">
-            <Label className="text-muted">Message</Label>
-            <Input
-              type="textarea"
-              name="message"
-              className="text-primary"
-              value={this.state.message}
-              onChange={this.handleChange.bind(this, 'message')}
-            />
-          </FormGroup>
+          <TextField
+            id="message"
+            label="Message"
+            className={classes.textField}
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            margin="normal"
+            variant="outlined"
+          />
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-      </>
-    )
-  }
+        <Button variant="primary" type="submit" style={{ color: 'blue' }}>
+          Submit
+        </Button>
+      </form>
+    </>
+  );
 }
 
 export default ContactForm
