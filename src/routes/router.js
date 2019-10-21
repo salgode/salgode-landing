@@ -13,7 +13,7 @@ const AppRouter = () => (
     <AppContainer>
       <Switch>
         <Route path='/como-funciona' component={HowToView} />
-        <Route path='/download' component={DownloadView} />
+        <Route path='/descarga' component={DownloadView} />
         <Route path='/contactanos' component={ContactView} />
         <Route path='/' component={MainView} />
         <Route component={NotFoundView} />
