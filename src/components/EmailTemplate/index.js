@@ -41,9 +41,7 @@ const ContactForm = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('asdasd')
+  const handleSubmit = () => {
     let templateParams = {
       name: name,
       from_name: email,
@@ -68,7 +66,7 @@ const ContactForm = () => {
     <Container component="main" maxWidth="xs">
     <div className={classes.paper}>
       <h1 className="p-heading1"> Contactanos! </h1>
-      <form className={classes.container} noValidate onSubmit={handleSubmit} autoComplete="off">
+      <form className={classes.container} onSubmit={handleSubmit} autoComplete="off">
         <TextField
             id="email"
             label="Email"
@@ -110,7 +108,7 @@ const ContactForm = () => {
             variant="outlined"
           />
       </form>
-      <Button variant="contained" color="primary" type="submit" className={classes.submit}>
+      <Button variant="contained" color="primary" type="submit" className={classes.submit} onClick={handleSubmit} >
           Submit
       </Button>
     </div>

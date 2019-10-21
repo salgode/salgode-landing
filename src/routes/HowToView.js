@@ -1,41 +1,72 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import CardMedia from '@material-ui/core/CardMedia';
-import Links from '@material-ui/core/Link';
-
-
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
-  cardMedia: {
-    width: '100%',
-    height: 1000,
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    height: 600,
+    width: 300,
+    backgroundColor: 'red'
+  },
+  control: {
+    padding: theme.spacing(2),
   },
 }));
 
 export default function HowToView(){
   const classes = useStyles();
-
+  const spacing = 10;
   return (
-    <div>
-      <Grid container>
-        <Grid item xs={12} md={12}>
-          <CardMedia
-            className={classes.cardMedia}
-            image={require('../assets/infografias/passenger.jpg')}
-            title="Image title"
-          />
+    <div style={{ paddingBottom: 10}}>
+      <Grid item xs={12}>
+       <Typography component="h1"  ariant="h5">
+          <Box fontWeight="fontWeightBold" fontSize={24} m={1}>
+              Usuario
+          </Box>
+       </Typography>
+        <Grid container justify="center" spacing={spacing}>
+
+            <Grid key={"a"} item>
+              <Paper className={classes.paper} />
+            </Grid>
+
+            <Grid key={"b"} item>
+              <Paper className={classes.paper} />
+            </Grid>
+
+<             Grid key={"c"} item>
+              <Paper className={classes.paper} />
+            </Grid>
+
         </Grid>
-        <Grid item xs={12} md={12}>
-          <CardMedia
-            className={classes.cardMedia}
-            image={require('../assets/infografias/driver.jpg')}
-            title="Image title"
-          />
+      </Grid>
+
+    <hr style={{ marginTop: 10 }}/>
+      <Grid item xs={12}>
+      <Typography component="h1"  ariant="h5">
+          <Box fontWeight="fontWeightBold" fontSize={24} m={1}>
+              Conductor
+          </Box>
+       </Typography>
+        <Grid container justify="center" spacing={spacing}>
+          <Grid key={"a"} item>
+            <Paper className={classes.paper} />
+          </Grid>
+
+          <Grid key={"b"} item>
+            <Paper className={classes.paper} />
+          </Grid>
+
+          <Grid key={"c"} item>
+            <Paper className={classes.paper} />
+          </Grid>
+
         </Grid>
       </Grid>
     </div>
