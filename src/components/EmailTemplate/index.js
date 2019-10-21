@@ -109,7 +109,7 @@ const ContactForm = () => {
             variant="outlined"
           />
       </form>
-      <Button variant="contained" color="blue" type="submit" className={classes.submit}>
+      <Button variant="contained" color="primary" type="submit" className={classes.submit}>
           Submit
         </Button>
     </div>
