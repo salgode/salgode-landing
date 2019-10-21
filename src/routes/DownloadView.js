@@ -2,7 +2,7 @@ import React from 'react';
 
 const DownloadView = () => (
   <div>
-    DownloadView
+    Muy Pronto!
   </div>
 );
 
