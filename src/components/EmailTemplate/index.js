@@ -65,7 +65,7 @@ const ContactForm = () => {
   return (
     <Container component="main" maxWidth="xs">
     <div className={classes.paper}>
-      <h1 className="p-heading1"> Contactanos! </h1>
+      <h1 className="p-heading1"> ¡Contáctanos! </h1>
       <form className={classes.container} onSubmit={handleSubmit} autoComplete="off">
         <TextField
             id="email"
