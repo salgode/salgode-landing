@@ -6,13 +6,14 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
+import Links from '@material-ui/core/Link';
 
 
 
 const useStyles = makeStyles(theme => ({
   cardMedia: {
     width: '100%',
-    height: 550
+    height: 1000,
   },
 }));
 
