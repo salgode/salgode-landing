@@ -8,11 +8,18 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     marginTop: 'auto',
     padding: theme.spacing(6, 0),
-    borderTop: '1px solid blue',
   },
   fab: {
     margin: theme.spacing(1),
   },
+  image: {
+    width: '50px',
+    heigth: '50px'
+  },
+  gh: {
+    width: '60px',
+    heigth: '60px'
+  }
 }));
 
 export default function StickyFooter() {
@@ -22,21 +29,23 @@ export default function StickyFooter() {
     <footer className={classes.footer}>
       <Container maxWidth="lg">
       <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
+       container
+       direction="row"
+       justify="space-evenly"
+       alignItems="center"
       >
         <Typography variant="h6" align="center" gutterBottom>
-        <a href="https://www.facebook.com/SalgoDe-112132566873573/">Facebook</a>
+
+        <a href="https://www.facebook.com/SalgoDe-112132566873573/"><img src={require('../../assets/fb.png')} alt="fb" className={classes.image} /></a>
         </Typography>
 
         <Typography variant="h6" align="center" gutterBottom>
-        <a href="https://www.instagram.com/salgodecl/">Instagram</a>
+
+        <a href="https://www.instagram.com/salgodecl/"> <img src={require('../../assets/ig.png')} alt="ig" className={classes.image} /></a>
         </Typography>
 
         <Typography variant="h6" align="center" gutterBottom>
-          <a href="https://github.com/Varuscl/salgode">Github</a>
+          <a href="https://github.com/Varuscl/salgode"><img src={require('../../assets/gh.png')} alt="gh" className={classes.gh} /></a>
         </Typography>
       </Grid>
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
