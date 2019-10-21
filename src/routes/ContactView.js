@@ -1,8 +1,9 @@
 import React from 'react';
+import Email from '../components/EmailTemplate';
 
 const ContactView = () => (
   <div>
-    contact view
+    <Email />
   </div>
 );
 
