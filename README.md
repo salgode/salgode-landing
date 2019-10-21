@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# landing-page-salgode
+landing page app SalgoDe 
+=======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +70,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+>>>>>>> de2dd3f62bcb061f54c7c7b9acb339943374457c
