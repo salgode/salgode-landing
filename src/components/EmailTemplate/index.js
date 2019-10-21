@@ -109,7 +109,7 @@ const ContactForm = () => {
           />
       </form>
       <Button variant="contained" color="primary" type="submit" className={classes.submit} onClick={handleSubmit} >
-          Submit
+          Enviar
       </Button>
     </div>
     </Container>
