@@ -3,10 +3,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 
 const sections = [
-  { name: 'Quienes Somos', link: '/'},
+  { name: 'Quiénes Somos', link: '/'},
   // { name: 'Descarga La App', link: '/descarga'},
-  { name: 'Como Funciona', link: '/como-funciona'},
-  { name: 'Contactanos', link: '/contactanos' },
+  { name: 'Cómo Funciona', link: '/como-funciona'},
+  { name: 'Contáctanos', link: '/contactanos' },
 ];
 
 const Links = ({ classes }) => {
