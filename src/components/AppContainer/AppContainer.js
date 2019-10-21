@@ -8,6 +8,11 @@ import Links from './Links';
 import Footer from './Footer';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+  },
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
@@ -23,7 +28,8 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
   },
   main: {
-   //backgroundColor: 'blue',
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
   },
   footer: {
     //backgroundColor: 'red',
@@ -39,7 +45,7 @@ export default function AppContainer({ children }) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className={classes.root}>
         <Header classes={classes} />
         <Links classes={classes}/>
         <Paper className={classes.main}>
