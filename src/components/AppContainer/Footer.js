@@ -2,11 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-
+import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   footer: {
-    padding: theme.spacing(2),
+    backgroundColor: theme.palette.background.paper,
     marginTop: 'auto',
+    padding: theme.spacing(6, 0),
     borderTop: '1px solid blue',
   },
   fab: {
@@ -19,21 +20,29 @@ export default function StickyFooter() {
 
   return (
     <footer className={classes.footer}>
-    <Container maxWidth="sm">
+      <Container maxWidth="lg">
       <Grid
         container
         direction="row"
         justify="center"
         alignItems="center"
       >
-        facebook
+        <Typography variant="h6" align="center" gutterBottom>
+          Facebook
+        </Typography>
 
-        instagram
+        <Typography variant="h6" align="center" gutterBottom>
+          Instagram
+        </Typography>
 
-        github
-
+        <Typography variant="h6" align="center" gutterBottom>
+          Github
+        </Typography>
       </Grid>
-    </Container>
+          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+            Ayuda compartiendo tu viaje!
+          </Typography>
+        </Container>
   </footer>
   );
 }
