@@ -1,19 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline'
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Header from './Header';
 import Links from './Links';
 import Footer from './Footer';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
   },
   toolbar: {
-    borderBottom: `1px solid blue`,
+    borderBottom: '1px solid blue',
   },
   toolbarTitle: {
     flex: 1,
@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(2),
   },
   footer: {
-    //backgroundColor: 'red',
+    // backgroundColor: 'red',
     bottom: 0,
     padding: theme.spacing(6, 0),
   },
@@ -42,14 +42,14 @@ export default function AppContainer({ children }) {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <>
       <CssBaseline />
       <Container maxWidth="lg" className={classes.root}>
         <Header classes={classes} />
-        <Links classes={classes}/>
+        <Links classes={classes} />
         {children}
         <Footer classes={classes} />
       </Container>
-    </React.Fragment>
+    </>
   );
 }
