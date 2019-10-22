@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import * as emailjs from 'emailjs-com'
+import React, { useState } from 'react';
+import * as emailjs from 'emailjs-com';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
   },
   textField: {
-   width: '100%'
+    width: '100%',
   },
   dense: {
     marginTop: theme.spacing(2),
@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
     backgroundColor: 'blue',
-    color: 'white'
+    color: 'white',
   },
   paper: {
     marginTop: theme.spacing(8),
@@ -42,47 +42,47 @@ const ContactForm = () => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = () => {
-    let templateParams = {
-      name: name,
+    const templateParams = {
+      name,
       from_name: email,
       to_name: 'nicoteare@gmail.com',
-      subject: subject,
+      subject,
       message_html: message,
-     }
-     emailjs.send(
+    };
+    emailjs.send(
       'gmail',
       'salgode',
-       templateParams,
+      templateParams,
       process.env.REACT_APP_EMAILJS_TOKEN,
-     )
-     setName('')
-     setEmail('')
-     setSubject('')
-     setMessage('')
-  }
+    );
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  };
 
 
   return (
     <Container component="main" maxWidth="xs">
-    <div className={classes.paper}>
-      <h1 className="p-heading1"> ¡Contáctanos! </h1>
-      <form className={classes.container} onSubmit={handleSubmit} autoComplete="off">
-        <TextField
+      <div className={classes.paper}>
+        <h1 className="p-heading1"> ¡Contáctanos! </h1>
+        <form className={classes.container} onSubmit={handleSubmit} autoComplete="off">
+          <TextField
             id="email"
             label="Mail"
             className={classes.textField}
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             margin="normal"
             variant="outlined"
           />
 
-        <TextField
+          <TextField
             id="name"
             label="Nombre"
             className={classes.textField}
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             margin="normal"
             variant="outlined"
           />
@@ -92,7 +92,7 @@ const ContactForm = () => {
             label="Tema"
             className={classes.textField}
             value={subject}
-            onChange={e => setSubject(e.target.value)}
+            onChange={(e) => setSubject(e.target.value)}
             margin="normal"
             variant="outlined"
           />
@@ -103,17 +103,17 @@ const ContactForm = () => {
             label="Mensaje"
             className={classes.textField}
             value={message}
-            onChange={e => setMessage(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
             margin="normal"
             variant="outlined"
           />
-      </form>
-      <Button variant="contained" color="primary" type="submit" className={classes.submit} onClick={handleSubmit} >
+        </form>
+        <Button variant="contained" color="primary" type="submit" className={classes.submit} onClick={handleSubmit}>
           Enviar
-      </Button>
-    </div>
+        </Button>
+      </div>
     </Container>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;

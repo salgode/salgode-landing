@@ -5,12 +5,12 @@ import Grid from '@material-ui/core/Grid';
 const Header = ({ classes }) => (
   <Toolbar className={classes.toolbar}>
     <Grid
-    container
-    direction="row"
-    justify="space-evenly"
-    alignItems="center"
+      container
+      direction="row"
+      justify="space-evenly"
+      alignItems="center"
     >
-      <img src={require('../../assets/_salgode.png')} style={{ width: 200 }} alt="Salgo De"/>
+      <img src={require('../../assets/_salgode.png')} style={{ width: 200 }} alt="Salgo De" />
     </Grid>
   </Toolbar>
 );

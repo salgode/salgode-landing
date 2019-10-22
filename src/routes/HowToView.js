@@ -1,23 +1,23 @@
-import React from "react";
-import { Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   img: {
     height: 600,
-    width: 300
+    width: 300,
   },
   control: {
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
   title: {
-    fontFamily: "Kepler296"
-  }
+    fontFamily: 'Kepler296',
+  },
 }));
 
 export default function HowToView() {
@@ -37,28 +37,28 @@ export default function HowToView() {
           </Box>
         </Typography>
         <Grid container justify="center" spacing={spacing}>
-          <Grid key={"a"} item>
+          <Grid key="a" item>
             <img
               alt="asdf"
               className={classes.img}
-              src={require("../assets/infografias/passenger1.jpg")}
-            ></img>
+              src={require('../assets/infografias/passenger1.jpg')}
+            />
           </Grid>
 
-          <Grid key={"b"} item>
+          <Grid key="b" item>
             <img
               alt="asdf"
               className={classes.img}
-              src={require("../assets/infografias/passenger2.jpg")}
-            ></img>
+              src={require('../assets/infografias/passenger2.jpg')}
+            />
           </Grid>
 
-          <Grid key={"c"} item>
+          <Grid key="c" item>
             <img
               alt="asdf"
               className={classes.img}
-              src={require("../assets/infografias/passenger3.jpg")}
-            ></img>
+              src={require('../assets/infografias/passenger3.jpg')}
+            />
           </Grid>
         </Grid>
       </Grid>
@@ -71,28 +71,28 @@ export default function HowToView() {
           </Box>
         </Typography>
         <Grid container justify="center" spacing={spacing}>
-          <Grid key={"a"} item>
+          <Grid key="a" item>
             <img
               alt="asdf"
               className={classes.img}
-              src={require("../assets/infografias/driver1.jpg")}
-            ></img>
+              src={require('../assets/infografias/driver1.jpg')}
+            />
           </Grid>
 
-          <Grid key={"b"} item>
+          <Grid key="b" item>
             <img
               alt="asdf"
               className={classes.img}
-              src={require("../assets/infografias/driver2.jpg")}
-            ></img>
+              src={require('../assets/infografias/driver2.jpg')}
+            />
           </Grid>
 
-          <Grid key={"c"} item>
+          <Grid key="c" item>
             <img
               alt="asdf"
               className={classes.img}
-              src={require("../assets/infografias/driver3.jpg")}
-            ></img>
+              src={require('../assets/infografias/driver3.jpg')}
+            />
           </Grid>
         </Grid>
       </Grid>
