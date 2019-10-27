@@ -3,9 +3,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 
 const sections = [
-  { name: 'Quiénes Somos', link: '/' },
+  { name: 'Quiénes Somos', link: '/'},
+  { name: 'Cómo Funciona', link: '/como-funciona'},
   // { name: 'Descarga La App', link: '/descarga'},
-  { name: 'Cómo Funciona', link: '/como-funciona' },
+  // { name: 'Ingresar', link: 'https://salgode.app'},
   { name: 'Contáctanos', link: '/contactanos' },
 ];
 

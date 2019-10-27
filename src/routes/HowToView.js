@@ -1,19 +1,19 @@
-import React from 'react';
-import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   img: {
     height: 600,
-    width: 300,
+    width: 300
   },
   control: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   title: {
     fontFamily: 'Kepler296',
