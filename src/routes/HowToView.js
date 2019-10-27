@@ -40,10 +40,10 @@ export default function HowToView(){
               src={require('../assets/infografias/passenger2.jpg')}></img>
             </Grid>
 
-            <Grid key={"c"} item>
+            {/* <Grid key={"c"} item>
               <img alt="asdf" className={classes.img} 
               src={require('../assets/infografias/passenger3.jpg')}></img>
-            </Grid>
+            </Grid> */}
 
         </Grid>
       </Grid>
