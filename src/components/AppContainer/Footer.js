@@ -49,7 +49,7 @@ export default function StickyFooter() {
           </Typography>
 
           <Typography variant="h6" align="center" gutterBottom>
-            <a href="https://github.com/Varuscl/salgode"><img src={require('../../assets/gh.png')} alt="gh" className={classes.gh} /></a>
+            <a href="https://github.com/salgode"><img src={require('../../assets/gh.png')} alt="gh" className={classes.gh} /></a>
           </Typography>
         </Grid>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
