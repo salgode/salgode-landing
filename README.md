@@ -1,4 +1,4 @@
-# Salgode Landing
+# SalgoDe Landing
 
 Landing page de la aplicación SalgoDe, una aplicación gratuita para compartir viajes.
 
