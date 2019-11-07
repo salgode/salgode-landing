@@ -1,19 +1,25 @@
-import React from "react";
-import { Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import pass1info from '../assets/infografias/passenger1.jpg';
+import pass2info from '../assets/infografias/passenger2.jpg';
+import pass3info from '../assets/infografias/passenger3.jpg';
+import driv1info from '../assets/infografias/driver1.jpg';
+import driv2info from '../assets/infografias/driver2.jpg';
+import driv3info from '../assets/infografias/driver3.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   img: {
     height: 600,
-    width: 300
+    width: 300,
   },
   control: {
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
   title: {
     fontFamily: 'Kepler296',
@@ -41,7 +47,7 @@ export default function HowToView() {
             <img
               alt="asdf"
               className={classes.img}
-              src={require('../assets/infografias/passenger1.jpg')}
+              src={pass1info}
             />
           </Grid>
 
@@ -49,7 +55,7 @@ export default function HowToView() {
             <img
               alt="asdf"
               className={classes.img}
-              src={require('../assets/infografias/passenger2.jpg')}
+              src={pass2info}
             />
           </Grid>
 
@@ -57,7 +63,7 @@ export default function HowToView() {
             <img
               alt="asdf"
               className={classes.img}
-              src={require('../assets/infografias/passenger3.jpg')}
+              src={pass3info}
             />
           </Grid>
         </Grid>
@@ -75,7 +81,7 @@ export default function HowToView() {
             <img
               alt="asdf"
               className={classes.img}
-              src={require('../assets/infografias/driver1.jpg')}
+              src={driv1info}
             />
           </Grid>
 
@@ -83,7 +89,7 @@ export default function HowToView() {
             <img
               alt="asdf"
               className={classes.img}
-              src={require('../assets/infografias/driver2.jpg')}
+              src={driv2info}
             />
           </Grid>
 
@@ -91,7 +97,7 @@ export default function HowToView() {
             <img
               alt="asdf"
               className={classes.img}
-              src={require('../assets/infografias/driver3.jpg')}
+              src={driv3info}
             />
           </Grid>
         </Grid>

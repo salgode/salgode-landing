@@ -9,6 +9,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Hidden from '@material-ui/core/Hidden';
 import Box from '@material-ui/core/Box';
+import car from '../assets/car.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,9 +57,6 @@ const useStyles = makeStyles((theme) => ({
   cardMedia: {
     width: 250,
     height: 250,
-  },
-  title: {
-    fontFamily: 'Kepler296',
   },
   title: {
     fontFamily: 'Kepler296',
@@ -132,7 +130,7 @@ export default function MainView() {
               <Hidden xsDown>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={require('../assets/car.png')}
+                  image={car}
                   title="Image title"
                 />
               </Hidden>
