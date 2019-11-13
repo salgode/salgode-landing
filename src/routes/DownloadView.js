@@ -50,7 +50,7 @@ export default function DownloadView() {
             </Grid>
             {/* </div> */}
           </Grid>
-          <p style={{ textAlign: 'center', fontSize: '20px' }}>¡Recuerda confirmar tu email antes de ingresar!</p>
+          <p style={{ textAlign: 'center', fontSize: '14px', fontWeight: 'bold' }}>¡Recuerda confirmar tu email antes de ingresar!</p>
           <Grid key="b" container item justify="center" className={classes.item} direction="row">
             <div>
               <Grid key="d" item spacing={spacing}>
