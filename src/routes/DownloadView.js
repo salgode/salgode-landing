@@ -40,9 +40,9 @@ export default function DownloadView() {
           <Grid key="a" container item justify="center" className={classes.item} direction="row">
             {/* <div> */}
             <Grid key="c" item spacing={spacing}>
-              <Link href="https://salgode.app">
+              <Link href="https://apps.apple.com/us/app/salgode-comparte-tu-viaje/id1487651479?ls=1">
                 <img
-                  alt="asdf"
+                  alt="Descarga en App Store"
                   className={classes.appstore}
                   src={appstore}
                 />
@@ -50,12 +50,13 @@ export default function DownloadView() {
             </Grid>
             {/* </div> */}
           </Grid>
+          <p style={{ textAlign: 'center', fontSize: '20px' }}>¡Recuerda confirmar tu email antes de ingresar!</p>
           <Grid key="b" container item justify="center" className={classes.item} direction="row">
             <div>
               <Grid key="d" item spacing={spacing}>
-                <Link href="https://salgode.app">
+                <Link href="https://play.google.com/store/apps/details?id=cl.salgode.salgode">
                   <img
-                    alt="asdf"
+                    alt="Descarga en Google Play"
                     className={classes.googleplay}
                     src={googleplay}
                   />
